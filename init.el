@@ -20,6 +20,7 @@
 (live-add-pack-lib "web-mode")
 (require 'web-mode)
 
+(setq scss-compile-at-save t)
 (setq css-indent-offset 2)
 
 (add-hook 'python-mode-hook 'electric-pair-mode)
