@@ -19,11 +19,21 @@
 (require 'scss-mode)
 (live-add-pack-lib "web-mode")
 (require 'web-mode)
+(live-add-pack-lib "coffee-mode")
+(require 'coffee-mode)
+(live-add-pack-lib "neotree")
+(require 'neotree)
 
-(setq scss-compile-at-save t)
+
+(setq scss-compile-at-save false)
 (setq css-indent-offset 2)
+(global-set-key (kbd  "C-]") 'enlarge-window-horizontally)
+;;(global-set-key (kbd  "C-[") 'shrink-window-horizontally)
 
 (add-hook 'python-mode-hook 'electric-pair-mode)
+
+;; disable C-z that sends emacs to the background
+(global-unset-key (kbd "C-z"))
 
 ;; use alt key for meta on mac
 ;;(setq mac-option-modifier 'alt)
