@@ -28,6 +28,7 @@
 (setq neo-window-width 50)
 (setq scss-compile-at-save false)
 (setq css-indent-offset 2)
+(setq js-indent-level 2)
 (global-set-key (kbd  "C-]") 'enlarge-window-horizontally)
 ;;(global-set-key (kbd  "C-[") 'shrink-window-horizontally)
 
