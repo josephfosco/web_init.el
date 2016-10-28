@@ -29,6 +29,8 @@
 (setq scss-compile-at-save false)
 (setq css-indent-offset 2)
 (setq js-indent-level 2)
+(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
+(add-to-list 'auto-mode-alist '("\\.es6\\'" . js2-mode))
 (global-set-key (kbd  "C-]") 'enlarge-window-horizontally)
 ;;(global-set-key (kbd  "C-[") 'shrink-window-horizontally)
 
