@@ -32,7 +32,7 @@
      (font-lock-reference-face ((t (:foreground "gray"))))
      (font-lock-regexp-grouping-backslash ((t (:foreground "#E9C062"))))
      (font-lock-regexp-grouping-construct ((t (:foreground "red"))))
-     (font-lock-string-face ((t (:foreground "#004000"))))
+     (font-lock-string-face ((t (:foreground "#008000"))))
      (font-lock-type-face ((t (:foreground "#00A000"))))
      (font-lock-variable-name-face ((t (:foreground "#00A000"))))
      (font-lock-warning-face ((t (:bold t :foreground "Pink"))))

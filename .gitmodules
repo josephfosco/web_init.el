@@ -1,0 +1,3 @@
+[submodule "lib/neotree"]
+	path = lib/neotree
+	url = git://github.com/jaypei/emacs-neotree.git

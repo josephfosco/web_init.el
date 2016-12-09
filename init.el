@@ -39,6 +39,33 @@
 ;; disable C-z that sends emacs to the background
 (global-unset-key (kbd "C-z"))
 
+(load-file (concat (live-pack-lib-dir) "monochromatic-green.el"))
+(color-theme-monochromatic-green)
+(add-hook 'find-file-hook 'color-theme-monochromatic-green)
+
+(setq live-disable-zone t)
+
+
+(when (eq system-type 'darwin)
+  ;; terminal clipboard while inside tmux
+  (unless (display-graphic-p)
+    (when (and (> (length (getenv "TMUX")) 0) (executable-find "reattach-to-user-namespace"))
+
+    (defun paste-from-osx ()
+      (shell-command-to-string "reattach-to-user-namespace pbpaste") )
+
+    (defun cut-to-osx (text &optional push)
+      (let ((process-connection-type nil))
+        (let ((proc (start-process "pbcopy" "*Messages*" "reattach-to-user-namespace" "pbcopy") ))
+          (process-send-string proc text)
+          (process-send-eof proc))))
+
+      (setq interprogram-cut-function 'cut-to-osx)
+      (setq interprogram-paste-function 'paste-from-osx)
+      )
+    )
+  )
+
 ;; use alt key for meta on mac
 ;;(setq mac-option-modifier 'alt)
 
