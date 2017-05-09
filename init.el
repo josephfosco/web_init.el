@@ -160,3 +160,5 @@
 	  ))
       )
   )
+
+(setq live-ascii-art-logo "")
