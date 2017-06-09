@@ -23,7 +23,8 @@
 (require 'coffee-mode)
 (live-add-pack-lib "neotree")
 (require 'neotree)
-
+(live-add-pack-lib "x-copypaste")
+(require 'x-copypaste)
 
 (setq neo-window-width 50)
 (setq scss-compile-at-save false)
@@ -44,7 +45,6 @@
 (add-hook 'find-file-hook 'color-theme-monochromatic-green)
 
 (setq live-disable-zone t)
-
 
 (when (eq system-type 'darwin)
   ;; terminal clipboard while inside tmux
