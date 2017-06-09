@@ -1,8 +1,13 @@
 ;; script to allow copy/paste to/form emacs to system clipboard
+;;
+;; Requirements:
+;;    under Linux sel is required
+;;
 ;; To use:
 ;;   copy - 'M-x yank-to-x-clipboard'
 ;;   paste - 'M-x paste-from-x-clipboard'
-
+;;
+;; from this post http://blog.binchen.org/posts/copypaste-in-emacs.html
 
 (setq *is-a-mac* (eq system-type 'darwin))
 (setq *cygwin* (eq system-type 'cygwin) )
