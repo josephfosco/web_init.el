@@ -27,6 +27,10 @@
 (require 'x-copypaste)
 
 (setq neo-window-width 50)
+(setq neo-autorefresh nil)
+(setq neo-show-hidden-files t)
+(setq neo-window-position 'left)
+
 (setq scss-compile-at-save false)
 (setq css-indent-offset 2)
 (setq js-indent-level 2)
@@ -36,9 +40,22 @@
 ;;(global-set-key (kbd  "C-[") 'shrink-window-horizontally)
 
 (add-hook 'python-mode-hook 'electric-pair-mode)
-
+(add-hook 'python-mode-hook 'paredit-mode)
+;; prevent paredit from adding a space before opening paren in certain modes
+(defun mode-space-delimiter-p (endp delimiter)
+  "Don't insert a space before delimiters in certain modes"
+  (or
+   (bound-and-true-p python-mode)
+   (bound-and-true-p js2-mode)
+   (bound-and-true-p js-mode)
+   (bound-and-true-p javascript-mode)))
+(add-to-list 'paredit-space-for-delimiter-predicates #'mode-space-delimiter-p)
 ;; disable C-z that sends emacs to the background
 (global-unset-key (kbd "C-z"))
+
+;; next 2 lines to make windows split horizontally by default
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
 
 (load-file (concat (live-pack-lib-dir) "monochromatic-green.el"))
 (color-theme-monochromatic-green)
