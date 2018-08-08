@@ -14,7 +14,7 @@
 (setq split-height-threshold 1200)  ;; do not automatically split vertically
 (setq split-width-threshold 2000)   ;; do not automatically split horizontally
 
-(require 'dirtree)
+;;(require 'dirtree)
 (live-add-pack-lib "scss-mode")
 (require 'scss-mode)
 (live-add-pack-lib "web-mode")
@@ -29,7 +29,7 @@
 (setq neo-window-width 50)
 (setq neo-autorefresh nil)
 (setq neo-show-hidden-files t)
-(setq neo-window-position 'left)
+;;(setq neo-window-position (quote left))
 
 (setq scss-compile-at-save false)
 (setq css-indent-offset 2)
