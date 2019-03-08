@@ -10,3 +10,9 @@
 [submodule "lib/web-mode"]
 	path = lib/web-mode
 	url = git://github.com/fxbois/web-mode.git
+[submodule "lib/treemacs"]
+	path = lib/treemacs
+	url = https://github.com/Alexander-Miller/treemacs.git
+[submodule "lib/use-package"]
+	path = lib/use-package
+	url = https://github.com/jwiegley/use-package.git

@@ -4,7 +4,7 @@
 ;;(define-key global-map (kbd "C-+") 'text-scale-increase)
 ;;(define-key global-map (kbd "C--") 'text-scale-decrease)
 
-(define-key global-map (kbd "C-x t") 'neotree-toggle)
-
 (define-key global-map (kbd "C-x c") 'copy-to-x-clipboard)
 (define-key global-map (kbd "C-x p") 'paste-from-x-clipboard)
+
+(define-key global-map (kbd "C-x t") 'neotree-toggle)
